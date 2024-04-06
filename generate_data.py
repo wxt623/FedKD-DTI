@@ -114,9 +114,9 @@ def get_DTI_dict(DTIs):
 def Non_IID_protein(dataset, K):
     dataset = shuffle_dataset(dataset, SEED)
 
-    public_train= dataset[0 : int(len(dataset)*0.23)]                        # 公共训练集
+    public_train= dataset[0 : int(len(dataset)*0.24)]                        # 公共训练集
 
-    public_test = dataset[int(len(dataset)*0.23) : int(len(dataset)*0.3)]    # 共用测试集
+    public_test = dataset[int(len(dataset)*0.24) : int(len(dataset)*0.3)]    # 共用测试集
 
     total_private_train = dataset[int(len(dataset)*0.3) :]                   # 私有训练集总和
 
