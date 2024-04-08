@@ -321,7 +321,7 @@ if __name__ == "__main__":
                         del col_compounds, col_proteins, col_predictions
                 clients_preds.append(single_preds)
 
-
+            total_sum = sum(len(sublist) for sublist in private_train_list)
             """聚合预测值"""
             print("...聚合预测值...")
             count = len(clients_preds[0])       # 批量数
@@ -329,8 +329,11 @@ if __name__ == "__main__":
             for i in range(count):          # 遍历每个批量
                 empty_tensor = torch.zeros(clients_preds[0][i].size())      # 与预测值张量形状一致
                 for j in range(K):                      # 求和
-                    empty_tensor = empty_tensor + clients_preds[j][i]
-                mean_preds[i] = empty_tensor / K        # 平均
+                    w = len(private_train_list[j])/total_sum
+                    empty_tensor = empty_tensor + w*clients_preds[j][i]     # 加权平均
+                    #empty_tensor = empty_tensor + clients_preds[j][i]
+                mean_preds[i] = empty_tensor
+                #mean_preds[i] = empty_tensor / K        # 平均
 
 
             """服务端蒸馏"""
