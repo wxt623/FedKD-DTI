@@ -1,0 +1,33 @@
+{
+
+    "K" : 2,
+
+    "Centralized" : 0,
+    "pre_epochs" : 100,
+    "pre_lr" : 1e-4,
+    "pre_batch_size" : 256,
+    "pre_patience" : 5,
+    "pre_delta" : 0.001,
+
+    "Local" : 0,
+    "init_epochs" : 100,
+    "init_lr" : 1e-4,
+    "init_batch_size" : 256,
+    "init_patience" : 5,
+    "init_delta" : 0.001,
+
+    "FedKD-DTI" : 1,
+    "collaborate_Epoch" : 100,
+    "pri_patience" : 5,
+    "pri_delta" : 0.001,
+    "N_collaborative" : 5000,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+    "alignment_epoch" : 1,
+    "alignment_batch_size" : 256,
+    "alignment_lr" : 1e-4,
+
+    "private_training_epoch" : 1,
+    "private_training_batch_size" : 256,
+    "private_training_lr" : 1e-4
+    
+}
